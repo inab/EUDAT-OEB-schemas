@@ -1,55 +1,10 @@
 {
-  "community": "e9b9792e-79fb-4b07-b6b4-b9c2bd06d095", 
-  "draft_json_schema": {
-    "$ref": "https://b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/json_schema", 
-    "$schema": "http://json-schema.org/draft-04/schema#"
-  }, 
-  "json_schema": {
-    "allOf": [
-      {
-        "$schema": "http://json-schema.org/draft-04/schema#", 
-        "additionalProperties": false, 
-        "b2share": {
-          "presentation": {
-            "major": [
-              "community", 
-              "titles", 
-              "descriptions", 
-              "creators", 
-              "open_access", 
-              "embargo_date", 
-              "license", 
-              "disciplines", 
-              "keywords", 
-              "contact_email"
-            ], 
-            "minor": [
-              "contributors", 
-              "resource_types", 
-              "alternate_identifiers", 
-              "version", 
-              "publisher", 
-              "language"
-            ]
-          }
-        }, 
-        "properties": {
-          "$schema": {
-            "type": "string"
-          }, 
-          "_deposit": {
-            "type": "object"
-          }, 
-          "_files": {
-            "type": "array"
-          }, 
-          "_oai": {
-            "type": "object"
-          }, 
-          "_pid": {
-            "description": "Array of persistent identifiers pointing to this record.", 
-            "title": "Persistent Identifiers"
-          }, 
+  "$id": "https://b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0#/json_schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Edit Metadata file",
+  "type": "object",
+  "description": "New file to upload to EUDAT",
+    "properties": {
           "alternate_identifiers": {
             "description": "Any kind of other reference such as a URN, URI or an ISBN number.", 
             "items": {
@@ -325,24 +280,6 @@
           "open_access", 
           "publication_state", 
           "community_specific"
-        ], 
-        "type": "object"
-      }, 
-      {
-        "properties": {
-          "community_specific": {
-            "$schema": "http://json-schema.org/draft-04/schema#", 
-            "additionalProperties": false, 
-            "properties": {}, 
-            "type": "object"
-          }
-        }, 
-        "type": "object"
-      }
-    ]
-  }, 
-  "links": {
-    "self": "https://b2share.eudat.eu/api/communities/e9b9792e-79fb-4b07-b6b4-b9c2bd06d095/schemas/0"
-  }, 
-  "version": 0
-}
+        ]
+  }
+

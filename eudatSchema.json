@@ -34,7 +34,7 @@
             "type": "string"
           }, 
           "community_specific": {
-            "description": "Metadata schema for OpenEBench datasets submitted to EUDAT.", 
+            "description": "Metadata schema for OpenEBench datasets submitted to EUDAT.", "title": "OpenEBench metadata schema", 
             "items": {
               "additionalProperties": false, 
               "properties": {
@@ -77,10 +77,10 @@
                   "type", 
                   "oeb_community"
                 ], 
-              "type": "object"
-            }, 
+                "type": "object"
+            },
             "title": "OpenEBench metadata schema", 
-            "type": "object"
+            "type": "object"          
           }, 
           "contact_email": {
             "description": "Contact email information for this record.", 

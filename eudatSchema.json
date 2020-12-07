@@ -8,7 +8,9 @@
     "community": {
       "description": "The community to which the record has been submitted.",
       "title": "Community",
-      "type": "string"
+      "type": "string",
+      "readonly": false,
+      "default": "b3b2f331-7cf8-44c5-a15a-1dae9dca48f6"
     },
     "titles": {
       "description": "The title(s) of the uploaded resource, or a name by which the resource is known.",

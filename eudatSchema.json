@@ -9,7 +9,7 @@
       "description": "The community to which the record has been submitted.",
       "title": "Community",
       "type": "string",
-      "readonly": false,
+      "readonly": true,
       "default": "b3b2f331-7cf8-44c5-a15a-1dae9dca48f6"
     },
     "titles": {
@@ -82,7 +82,9 @@
     "open_access": {
       "description": "Indicate whether the record's files are publicly accessible or not. In case of restricted access the uploaded files will only be accessible by the record's owner and the community administrators. Please note that the record's metadata is always publicly accessible. ",
       "title": "Open Access",
-      "type": "boolean"
+      "type": "boolean",
+      "default": true,
+      "readonly": true
     },
     "embargo_date": {
       "description": "The date marking the end of the embargo period. The record will be marked as open access on the specified date at midnight. Please note that the record metadata is always publicly accessible, and only the data files can have private access.",
@@ -116,7 +118,8 @@
       },
       "title": "Disciplines",
       "type": "array",
-      "uniqueItems": true
+      "uniqueItems": true,
+      "default": "Life Sciences"
     },
     "keywords": {
       "description": "A list of keywords or key phrases describing the resource.",
@@ -205,7 +208,9 @@
               "Workflow",
               "Other"
             ],
-            "title": "Category"
+            "title": "Category",
+            "default": "Dataset",
+            "readonly": true
           }
         },
         "required": [
@@ -221,7 +226,9 @@
     "publisher": {
       "description": "The entity responsible for making the resource available, either a person, an organization, or a service.",
       "title": "Publisher",
-      "type": "string"
+      "type": "string",
+      "default": "OpenEBench VRE",
+      "readonly": true
     },
     "version": {
       "description": "Denote the version of the resource.",
@@ -231,7 +238,9 @@
     "language": {
       "description": "The primary language of the resource. Please use ISO_639-3 language codes.",
       "title": "Language",
-      "type": "string"
+      "type": "string",
+      "default": "eng",
+      "readonly": true
     },
     "publication_date": {
       "description": "The date when the data was or will be made publicly available (e.g. 1971-07-13)",

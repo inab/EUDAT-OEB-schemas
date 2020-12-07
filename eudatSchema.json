@@ -209,8 +209,7 @@
               "Other"
             ],
             "title": "Category",
-            "default": "Dataset",
-            "readonly": true
+            "default": "Dataset"
           }
         },
         "required": [
@@ -240,7 +239,10 @@
       "title": "Language",
       "type": "string",
       "default": "eng",
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "publication_date": {
       "description": "The date when the data was or will be made publicly available (e.g. 1971-07-13)",

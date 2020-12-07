@@ -240,7 +240,9 @@
       "title": "Language",
       "type": "string",
       "default": "eng",
-      "readonly": true
+      "options": {
+        "hidden": true
+      }
     },
     "publication_date": {
       "description": "The date when the data was or will be made publicly available (e.g. 1971-07-13)",
@@ -259,37 +261,9 @@
             "title": "Community OEB acronym",
             "type": "string"
           },
-          "oeb_id": {
-            "description": "The unique identifier of the dataset, provided by OEB API",
-            "pattern": "^OEBD[0-9]{3}[A-Z0-9]{7}$",
-            "title": "Dataset ID",
-            "type": "string"
-          },
-          "type": {
-            "description": "Type of dataset within OEB",
-            "enum": [
-              "public_reference",
-              "metrics_reference",
-              "input",
-              "participant",
-              "assessment",
-              "aggregation",
-              "other"
-            ],
-            "minLength": 1,
-            "title": "Dataset type",
-            "type": "string"
-          },
-          "version": {
-            "description": "Version (or release date) of the metadata",
-            "minLength": 1,
-            "title": "Version",
-            "type": "string"
-          }
+          
         },
         "required": [
-          "oeb_id",
-          "type",
           "oeb_community"
         ],
         "type": "object"

@@ -208,8 +208,7 @@
               "Workflow",
               "Other"
             ],
-            "title": "Category",
-            "default": "Dataset"
+            "title": "Category"
           }
         },
         "required": [

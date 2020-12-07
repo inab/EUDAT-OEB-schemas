@@ -5,34 +5,79 @@
   "type": "object",
   "description": "New file to upload to EUDAT",
     "properties": {
-          "alternate_identifiers": {
-            "description": "Any kind of other reference such as a URN, URI or an ISBN number.", 
-            "items": {
-              "additionalProperties": false, 
-              "properties": {
-                "alternate_identifier": {
-                  "type": "string"
-                }, 
-                "alternate_identifier_type": {
-                  "title": "Type", 
-                  "type": "string"
-                }
-              }, 
-              "required": [
-                "alternate_identifier", 
-                "alternate_identifier_type"
-              ], 
-              "type": "object"
-            }, 
-            "title": "Alternate identifiers", 
-            "type": "array", 
-            "uniqueItems": true
-          }, 
           "community": {
             "description": "The community to which the record has been submitted.", 
             "title": "Community", 
             "type": "string"
           }, 
+          "titles": {
+            "description": "The title(s) of the uploaded resource, or a name by which the resource is known.", 
+            "items": {
+              "additionalProperties": false, 
+              "properties": {
+                "title": {
+                  "type": "string"
+                }
+              }, 
+              "required": [
+                "title"
+              ], 
+              "type": "object"
+            }, 
+            "minItems": 1, 
+            "title": "Titles", 
+            "type": "array", 
+            "uniqueItems": true
+          }, 
+          "descriptions": {
+                "description": "A more elaborate description of the resource. Focus on a content description that makes it easy for others to find, and to interpret its relevance.", 
+                "items": {
+                  "additionalProperties": false, 
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    }, 
+                    "description_type": {
+                      "enum": [
+                        "Abstract", 
+                        "Methods", 
+                        "SeriesInformation", 
+                        "TableOfContents", 
+                        "TechnicalInfo", 
+                        "Other"
+                      ], 
+                      "title": "Type"
+                    }
+                  }, 
+                  "required": [
+                    "description", 
+                    "description_type"
+                  ], 
+                  "type": "object"
+                }, 
+                "title": "Descriptions", 
+                "type": "array", 
+                "uniqueItems": true
+              }, 
+           "creators": {
+            "description": "The full name of the creators. The personal name format should be: family, given (e.g.: Smith, John).", 
+            "items": {
+              "additionalProperties": false, 
+              "properties": {
+                "creator_name": {
+                  "type": "string"
+                }
+              }, 
+              "required": [
+                "creator_name"
+              ], 
+              "type": "object"
+            }, 
+            "title": "Creators", 
+            "type": "array", 
+            "uniqueItems": true
+          }, 
+      
           "community_specific": {
             "description": "Metadata schema for OpenEBench datasets submitted to EUDAT.", "title": "OpenEBench metadata schema", 
             "items": {
@@ -134,54 +179,8 @@
             "type": "array", 
             "uniqueItems": true
           }, 
-          "creators": {
-            "description": "The full name of the creators. The personal name format should be: family, given (e.g.: Smith, John).", 
-            "items": {
-              "additionalProperties": false, 
-              "properties": {
-                "creator_name": {
-                  "type": "string"
-                }
-              }, 
-              "required": [
-                "creator_name"
-              ], 
-              "type": "object"
-            }, 
-            "title": "Creators", 
-            "type": "array", 
-            "uniqueItems": true
-          }, 
-          "descriptions": {
-            "description": "A more elaborate description of the resource. Focus on a content description that makes it easy for others to find, and to interpret its relevance.", 
-            "items": {
-              "additionalProperties": false, 
-              "properties": {
-                "description": {
-                  "type": "string"
-                }, 
-                "description_type": {
-                  "enum": [
-                    "Abstract", 
-                    "Methods", 
-                    "SeriesInformation", 
-                    "TableOfContents", 
-                    "TechnicalInfo", 
-                    "Other"
-                  ], 
-                  "title": "Type"
-                }
-              }, 
-              "required": [
-                "description", 
-                "description_type"
-              ], 
-              "type": "object"
-            }, 
-            "title": "Descriptions", 
-            "type": "array", 
-            "uniqueItems": true
-          }, 
+          
+          
           "disciplines": {
             "description": "The scientific disciplines linked with the resource.", 
             "items": {
@@ -241,16 +240,7 @@
             "title": "Publication Date", 
             "type": "string"
           }, 
-          "publication_state": {
-            "description": "State of the publication workflow.", 
-            "enum": [
-              "draft", 
-              "submitted", 
-              "published"
-            ], 
-            "title": "Publication State", 
-            "type": "string"
-          }, 
+          
           "publisher": {
             "description": "The entity responsible for making the resource available, either a person, an organization, or a service.", 
             "title": "Publisher", 
@@ -295,25 +285,7 @@
             "type": "array", 
             "uniqueItems": true
           }, 
-          "titles": {
-            "description": "The title(s) of the uploaded resource, or a name by which the resource is known.", 
-            "items": {
-              "additionalProperties": false, 
-              "properties": {
-                "title": {
-                  "type": "string"
-                }
-              }, 
-              "required": [
-                "title"
-              ], 
-              "type": "object"
-            }, 
-            "minItems": 1, 
-            "title": "Titles", 
-            "type": "array", 
-            "uniqueItems": true
-          }, 
+          
           "version": {
             "description": "Denote the version of the resource.", 
             "title": "Version", 

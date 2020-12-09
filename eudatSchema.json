@@ -75,7 +75,9 @@
           "type": "object",
           "properties": {
             "creator_name": {
-              "type": "string"
+              "type": "string",
+              "title": "Creator name",
+              "default": "username"
             }
           },
           "required": [

@@ -278,7 +278,8 @@
               ],
               "minLength": 1,
               "title": "Dataset type",
-              "type": "string"
+              "type": "string",
+              "readonly": true
             },
             "oeb_community": {
               "description": "Acronym defined in OEB for the benchmarking community - ideally, should match the one used in the benchmarking data model",
@@ -291,7 +292,8 @@
               "description": "Version (or release date) of the metadata",
               "minLength": 1,
               "title": "Version",
-              "type": "string"
+              "type": "string",
+              "readonly": true
             }
           },
           "required": [

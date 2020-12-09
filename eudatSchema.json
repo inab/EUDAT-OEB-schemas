@@ -249,9 +249,8 @@
     },
     "community_specific": {
       "description": "Metadata schema for OpenEBench datasets submitted to EUDAT.",
-      "items": {
-        "additionalProperties": false,
-        "properties": {
+      "properties": {
+        "items": {
           "oeb_community": {
             "description": "Acronym defined in OEB for the benchmarking community - ideally, should match the one used in the benchmarking data model",
             "minLength": 1,
@@ -293,6 +292,9 @@
         ],
         "type": "object"
       },
+      "required": [
+        "items"
+      ],
       "title": "OpenEBench metadata schema",
       "type": "object"
     }

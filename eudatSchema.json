@@ -25,10 +25,13 @@
             "title"
           ]
         }
-      ]
+      ],
+      "minItems": 1,
+      "title": "Titles",
+      "uniqueItems": true
     },
     "descriptions": {
-      "type": "array",
+      "description": "A more elaborate description of the resource. Focus on a content description that makes it easy for others to find, and to interpret its relevance.",
       "items": [
         {
           "type": "object",
@@ -37,17 +40,29 @@
               "type": "string"
             },
             "description_type": {
-              "type": "string"
-            }
-          },
+            "enum": [
+              "Abstract",
+              "Methods",
+              "SeriesInformation",
+              "TableOfContents",
+              "TechnicalInfo",
+              "Other"
+            ],
+            "title": "Type"
+          }
+        },
           "required": [
             "description",
             "description_type"
           ]
         }
-      ]
+      ],
+      "type": "array",
+      "title": "Descriptions",
+      "uniqueItems": true
     },
     "creators": {
+      "description": "The full name of the creators. The personal name format should be: family, given (e.g.: Smith, John).",
       "type": "array",
       "items": [
         {
@@ -61,7 +76,10 @@
             "creator_name"
           ]
         }
-      ]
+      ],
+      "title": "Creators",
+      "type": "array",
+      "uniqueItems": true
     },
     "open_access": {
       "description": "Indicate whether the record's files are publicly accessible or not. In case of restricted access the uploaded files will only be accessible by the record's owner and the community administrators. Please note that the record's metadata is always publicly accessible. ",
@@ -71,12 +89,16 @@
       "readonly": true
     },
     "license": {
+      "title": "License",
+      "description": "Specify the license under which this data set is available to the users (e.g. GPL, Apache v2 or Commercial). Please use the License Selector for help and additional information.",
       "type": "object",
       "properties": {
         "license": {
           "type": "string"
         },
         "license_uri": {
+          "format": "uri",
+          "title": "URL",
           "type": "string"
         }
       },
@@ -85,20 +107,27 @@
       ]
     },
     "disciplines": {
+      "title": "Disciplines",
       "type": "array",
       "items": [
         {
           "type": "string"
         }
-      ]
+      ],
+      "uniqueItems": true,
+      "default": "Life Sciences",
+      "readonly": true
     },
     "keywords": {
+      "description": "A list of keywords or key phrases describing the resource.",
       "type": "array",
       "items": [
         {
           "type": "string"
         }
-      ]
+      ],
+      "title": "Keywords",
+      "uniqueItems": true
     },
     "contact_email": {
       "description": "Contact email information for this record.",
@@ -106,25 +135,91 @@
       "title": "Contact Email",
       "type": "string"
     },
+    "contributors": {
+      "description": "The list of all other contributors. Please mention all persons that were relevant in the creation of the resource.",
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "contributor_name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "contributor_type": {
+            "enum": [
+              "ContactPerson",
+              "DataCollector",
+              "DataCurator",
+              "DataManager",
+              "Distributor",
+              "Editor",
+              "HostingInstitution",
+              "Producer",
+              "ProjectLeader",
+              "ProjectManager",
+              "ProjectMember",
+              "RegistrationAgency",
+              "RegistrationAuthority",
+              "RelatedPerson",
+              "Researcher",
+              "ResearchGroup",
+              "RightsHolder",
+              "Sponsor",
+              "Supervisor",
+              "WorkPackageLeader",
+              "Other"
+            ],
+            "title": "Type"
+          }
+        },
+        "required": [
+          "contributor_name",
+          "contributor_type"
+        ],
+        "type": "object"
+      },
+      "title": "Contributors",
+      "type": "array",
+      "uniqueItems": true
+    },
     "resource_types": {
+      "description": "The type(s) of the resource.",
       "type": "array",
       "items": [
         {
           "type": "object",
           "properties": {
             "resource_type": {
+              "title": "Description",
               "type": "string"
             },
             "resource_type_general": {
-              "type": "string"
-            }
+            "enum": [
+              "Audiovisual",
+              "Collection",
+              "Dataset",
+              "Event",
+              "Image",
+              "InteractiveResource",
+              "Model",
+              "PhysicalObject",
+              "Service",
+              "Software",
+              "Sound",
+              "Text",
+              "Workflow",
+              "Other"
+            ],
+            "title": "Category"
+          }
           },
           "required": [
-            "resource_type",
             "resource_type_general"
           ]
         }
-      ]
+      ],
+      "minItems": 1,
+      "title": "Resource Type",
+      "uniqueItems": true
     },
     "version": {
       "description": "Denote the version of the resource.",
@@ -144,6 +239,12 @@
       "type": "string",
       "default": "OpenEBench VRE",
       "readonly": true
+    },
+    "embargo_date": {
+      "description": "The date marking the end of the embargo period. The record will be marked as open access on the specified date at midnight. Please note that the record metadata is always publicly accessible, and only the data files can have private access.",
+      "format": "date-time",
+      "title": "Embargo Date",
+      "type": "string"
     },
     "community_specific": {
       "type": "object",
@@ -185,6 +286,6 @@
   ],
   "additionalProperties": false,
   "format": "categories",
-  "basicCategoryTitle": "STEP 1: Generic Information",
+  "basicCategoryTitle": "Edit Information",
   "show_errors": "interaction"
 }

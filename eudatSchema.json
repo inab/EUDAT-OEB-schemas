@@ -113,15 +113,27 @@
           "default":"Creative Commons (CC)  4.0 International"
         },
         "license_uri": {
+          "watch": {
+            "licenseInput": "license"
+          },
           "format": "uri",
           "title": "URL",
           "type": "string",
           "readonly": true,
+          "if": {
+            "licenseInput": "Apache License 2.0"
+          },
+          "then": {
+            "license_uri": "http://www.apache.org/licenses/LICENSE-2.0"
+  		    },
+          "else": {
+            "license_uri":"http://creativecommons.org/licenses/by/4.0/"
+          }
         }
       },
       "required": [
-            "license"
-        ]
+        "license"
+      ]
     },
     "disciplines": {
       "title": "Disciplines",

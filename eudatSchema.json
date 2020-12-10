@@ -105,10 +105,11 @@
           "enum": [
             "Apache License 2.0",
             "GNU Public License v3.0",
-            "Creative Commons (CC) license"
+            "Creative Commons (CC)  4.0 International"
           ],
           "title": "License",
-          "default":"Creative Commons (CC) license"
+          "type": "string",
+          "default":"Creative Commons (CC)  4.0 International"
         },
         "license_uri": {
           "format": "uri",

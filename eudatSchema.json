@@ -54,7 +54,8 @@
               "TechnicalInfo",
               "Other"
             ],
-            "title": "Type"
+            "title": "Type",
+            "type": "string"
           }
         },
           "required": [
@@ -112,9 +113,13 @@
           "default":"Creative Commons (CC)  4.0 International"
         },
         "license_uri": {
+          "watch": {
+            "licenseInput": "license"
+          },
           "format": "uri",
           "title": "URL",
-          "type": "string"
+          "type": "string",
+          "readonly": true
         }
       },
       "required": [
@@ -183,7 +188,8 @@
               "WorkPackageLeader",
               "Other"
             ],
-            "title": "Type"
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -225,6 +231,7 @@
               "Other"
             ],
             "title": "Category",
+            "type" : "string",
             "default": "Dataset"
           }
          },

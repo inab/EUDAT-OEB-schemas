@@ -120,20 +120,21 @@
           "title": "URL",
           "type": "string",
           "readonly": true,
-          "if": {
-            "licenseInput": { "const": "Apache License 2.0" } 
-          },
-          "then": {
-            "license_uri": "http://www.apache.org/licenses/LICENSE-2.0"
-  		  },
-          "else": {
-            "license_uri":"http://creativecommons.org/licenses/by/4.0/"
-          }
         }
       },
-      "required": [
-        "license"
-      ]
+       "if": {
+        "properties": {
+          "license": { "const": "Apache License 2.0" }
+        }
+      },
+      "then": { 
+        "properties": {
+          "license_uri": "http://www.apache.org/licenses/LICENSE-2.0"
+        	}
+        },
+        "required": [
+            "license"
+          ]
     },
     "disciplines": {
       "title": "Disciplines",

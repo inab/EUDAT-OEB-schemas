@@ -249,12 +249,6 @@
       "default": "OpenEBench VRE",
       "readonly": true
     },
-    "embargo_date": {
-      "description": "The date marking the end of the embargo period. The record will be marked as open access on the specified date at midnight. Please note that the record metadata is always publicly accessible, and only the data files can have private access.",
-      "format": "date-time",
-      "title": "Embargo Date",
-      "type": "string"
-    },
     "community_specific": {
       "type": "object",
       "properties": {

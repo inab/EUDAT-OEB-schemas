@@ -115,6 +115,7 @@
           "format": "uri",
           "title": "URL",
           "type": "string"
+          "readonly": true
         }
       },
       "required": [
@@ -183,7 +184,8 @@
               "WorkPackageLeader",
               "Other"
             ],
-            "title": "Type"
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [
@@ -225,6 +227,7 @@
               "Other"
             ],
             "title": "Category",
+            "type": "string",
             "default": "Dataset"
           }
          },

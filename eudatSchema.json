@@ -102,7 +102,13 @@
       "type": "object",
       "properties": {
         "license": {
-          "type": "string"
+          "enum": [
+            "Apache License 2.0",
+            "GNU Public License v3.0",
+            "Creative Commons (CC) license"
+          ],
+          "title": "License",
+          "default":"Creative Commons (CC) license"
         },
         "license_uri": {
           "format": "uri",

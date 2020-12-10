@@ -211,7 +211,10 @@
           "properties": {
             "resource_type": {
               "title": "Description",
-              "type": "string"
+              "type": "string",
+              "default": "Benchmarking dataset",
+              "readonly": true
+              
             },
             "resource_type_general": {
             "enum": [
@@ -232,7 +235,8 @@
             ],
             "title": "Category",
             "type" : "string",
-            "default": "Dataset"
+            "default": "Dataset",
+            "readonly": true
           }
          },
           "required": [

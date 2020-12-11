@@ -54,7 +54,8 @@
               "TechnicalInfo",
               "Other"
             ],
-            "title": "Type"
+            "title": "Type",
+            "type": "string"
           }
         },
           "required": [
@@ -88,67 +89,6 @@
       "title": "Creators",
       "type": "array",
       "uniqueItems": true
-    },
-    "open_access": {
-      "description": "Indicate whether the record's files are publicly accessible or not. In case of restricted access the uploaded files will only be accessible by the record's owner and the community administrators. Please note that the record's metadata is always publicly accessible. ",
-      "title": "Open Access",
-      "type": "boolean",
-      "default": true,
-      "readonly": true
-    },
-    "license": {
-      "title": "License",
-      "description": "Specify the license under which this data set is available to the users (e.g. GPL, Apache v2 or Commercial). Please use the License Selector for help and additional information.",
-      "type": "object",
-      "properties": {
-        "license": {
-          "enum": [
-            "Apache License 2.0",
-            "GNU Public License v3.0",
-            "Creative Commons (CC)  4.0 International"
-          ],
-          "title": "License",
-          "type": "string",
-          "default":"Creative Commons (CC)  4.0 International"
-        },
-        "license_uri": {
-          "format": "uri",
-          "title": "URL",
-          "type": "string"
-        }
-      },
-      "required": [
-        "license"
-      ]
-    },
-    "disciplines": {
-      "title": "Disciplines",
-      "type": "array",
-      "items": [
-        {
-          "type": "string"
-        }
-      ],
-      "uniqueItems": true,
-      "default": "Life Sciences",
-      "readonly": true
-    },
-    "keywords": {
-      "description": "A list of keywords or key phrases describing the resource.",
-      "type": "array",
-      "items": [
-        {
-          "type": "string"
-        }
-      ],
-      "title": "Keywords",
-      "uniqueItems": true
-    },
-    "contact_email": {
-      "description": "Contact email information for this record.",
-      "format": "email",
-      "title": "Contact Email",
-      "type": "string"
     },
     "contributors": {
       "description": "The list of all other contributors. Please mention all persons that were relevant in the creation of the resource.",
@@ -196,6 +136,68 @@
       "type": "array",
       "uniqueItems": true
     },
+    "open_access": {
+      "description": "Indicate whether the record's files are publicly accessible or not. In case of restricted access the uploaded files will only be accessible by the record's owner and the community administrators. Please note that the record's metadata is always publicly accessible. ",
+      "title": "Open Access",
+      "type": "boolean",
+      "default": true,
+      "readonly": true
+    },
+    "license": {
+      "title": "License",
+      "description": "Specify the license under which this data set is available to the users (e.g. GPL, Apache v2 or Commercial). Please use the License Selector for help and additional information.",
+      "type": "object",
+      "properties": {
+        "license": {
+          "enum": [
+            "Apache License 2.0",
+            "GNU Public License v3.0",
+            "Creative Commons (CC)  4.0 International"
+          ],
+          "title": "License",
+          "type": "string",
+          "default":"Creative Commons (CC)  4.0 International"
+        },
+        "license_uri": {
+          "format": "uri",
+          "title": "URL",
+          "type": "string"
+          "readonly": true
+        }
+      },
+      "required": [
+        "license"
+      ]
+    },
+    "disciplines": {
+      "title": "Disciplines",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ],
+      "uniqueItems": true,
+      "default": "Life Sciences",
+      "readonly": true
+    },
+    "keywords": {
+      "description": "A list of keywords or key phrases describing the resource.",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Keywords",
+      "uniqueItems": true
+    },
+    "contact_email": {
+      "description": "Contact email information for this record.",
+      "format": "email",
+      "title": "Contact Email",
+      "type": "string"
+    },
     "resource_types": {
       "description": "The type(s) of the resource.",
       "type": "array",
@@ -205,7 +207,9 @@
           "properties": {
             "resource_type": {
               "title": "Description",
-              "type": "string"
+              "type": "string",
+              "default" : "OpenEBench",
+              "readonly": true
             },
             "resource_type_general": {
             "enum": [
@@ -225,7 +229,10 @@
               "Other"
             ],
             "title": "Category",
-            "default": "Dataset"
+            "type": "string",
+            "default": "Dataset",
+            "readonly": true
+              
           }
          },
           "required": [
@@ -253,7 +260,7 @@
       "description": "The entity responsible for making the resource available, either a person, an organization, or a service.",
       "title": "Publisher",
       "type": "string",
-      "default": "OpenEBench VRE",
+      "default": "OpenEBench",
       "readonly": true
     },
     "community_specific": {

@@ -162,7 +162,7 @@
         "license_uri": {
           "format": "uri",
           "title": "URL",
-          "type": "string"
+          "type": "string",
           "readonly": true
         }
       },

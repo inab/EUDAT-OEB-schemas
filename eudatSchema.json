@@ -67,6 +67,8 @@
       ],
       "type": "array",
       "title": "Descriptions",
+      "minItems": 1,
+      "maxItems":1,
       "uniqueItems": true
     },
     "creators": {
@@ -242,6 +244,7 @@
         }
       ],
       "minItems": 1,
+      "maxItems": 1,
       "title": "Resource Type",
       "uniqueItems": true
     },

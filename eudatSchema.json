@@ -33,6 +33,7 @@
         }
       ],
       "minItems": 1,
+      "maxItems":1,
       "title": "Titles",
       "uniqueItems": true
     },

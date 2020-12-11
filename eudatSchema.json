@@ -162,8 +162,8 @@
         "license_uri": {
           "format": "uri",
           "title": "URL",
-          "type": "string",
-          "readonly": true
+          "readonly": true,
+          "type": "string"
         }
       },
       "required": [

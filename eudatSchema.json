@@ -126,7 +126,8 @@
               "WorkPackageLeader",
               "Other"
             ],
-            "title": "Type"
+            "title": "Type",
+            "type": "string"
           }
         },
         "required": [

@@ -322,10 +322,7 @@
       
       "required": [
         "12ed8b46-1e2f-4fd3-9963-29c112b92da1"
-      ],
-      "options": {
-        "hidden": true
-      }
+      ]
     }
   },
   "required": [

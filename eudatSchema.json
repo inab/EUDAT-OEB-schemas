@@ -145,7 +145,10 @@
       "title": "Open Access",
       "type": "boolean",
       "default": true,
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "license": {
       "title": "License",
@@ -319,7 +322,6 @@
           ]
         }
       },
-      
       "required": [
         "12ed8b46-1e2f-4fd3-9963-29c112b92da1"
       ]

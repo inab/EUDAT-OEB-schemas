@@ -145,7 +145,10 @@
       "title": "Open Access",
       "type": "boolean",
       "default": true,
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "license": {
       "title": "License",
@@ -183,7 +186,10 @@
       ],
       "uniqueItems": true,
       "default": "Life Sciences",
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "keywords": {
       "description": "A list of keywords or key phrases describing the resource.",
@@ -259,14 +265,20 @@
       "title": "Language",
       "type": "string",
       "default": "eng",
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "publisher": {
       "description": "The entity responsible for making the resource available, either a person, an organization, or a service.",
       "title": "Publisher",
       "type": "string",
       "default": "OpenEBench",
-      "readonly": true
+      "readonly": true,
+      "options": {
+        "hidden": true
+      }
     },
     "community_specific": {
       "type": "object",

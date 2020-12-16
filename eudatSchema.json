@@ -145,7 +145,10 @@
       "title": "Open Access",
       "type": "boolean",
       "default": true,
-      "readonly": true
+      "readonly": true,
+      "options": {
+         "hidden": true
+       }
     },
     "license": {
       "title": "License",

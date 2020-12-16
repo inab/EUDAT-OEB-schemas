@@ -267,7 +267,7 @@
       "description": "Denote the version of the resource.",
       "title": "Version",
       "type": "string",
-      "default": "0.1",
+      "default": "0.1"
     },
     "language": {
       "description": "The primary language of the resource. Please use ISO_639-3 language codes.",

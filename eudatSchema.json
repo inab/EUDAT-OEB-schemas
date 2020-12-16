@@ -14,7 +14,9 @@
       "options": {
         "inputAttributes": {
           "value":"b3b2f331-7cf8-44c5-a15a-1dae9dca48f6"
-        }
+        },
+        "hidden": true
+        
       }
     },
     "titles": {
@@ -349,7 +351,6 @@
     "community_specific"
   ],
   "additionalProperties": false,
-  "format": "categories",
   "basicCategoryTitle": "Edit Information",
   "show_errors": "interaction"
 }

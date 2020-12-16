@@ -216,7 +216,10 @@
               "title": "Description",
               "type": "string",
               "default" : "OpenEBench",
-              "readonly": true
+              "readonly": true,
+              "options": {
+                "hidden": true
+                }
             },
             "resource_type_general": {
             "enum": [
@@ -238,7 +241,10 @@
             "title": "Category",
             "type": "string",
             "default": "Dataset",
-            "readonly": true
+            "readonly": true,
+            "options": {
+                "hidden": true
+            }
               
           }
          },
@@ -250,7 +256,10 @@
       "minItems": 1,
       "maxItems": 1,
       "title": "Resource Type",
-      "uniqueItems": true
+      "uniqueItems": true,
+      "options": {
+         "hidden": true
+       }
     },
     "version": {
       "description": "Denote the version of the resource.",

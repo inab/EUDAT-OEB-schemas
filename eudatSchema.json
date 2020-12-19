@@ -26,7 +26,8 @@
           "type": "object",
           "properties": {
             "title": {
-              "type": "string"
+              "type": "string",
+              "title": "Title"
             }
           },
           "required": [
@@ -46,7 +47,8 @@
           "type": "object",
           "properties": {
             "description": {
-              "type": "string"
+              "type": "string",
+              "title": "Description"
             },
             "description_type": {
             "enum": [
@@ -171,6 +173,7 @@
           "format": "uri",
           "title": "URL",
           "readonly": true,
+          "default":"http://creativecommons.org/licenses/by/4.0/",
           "type": "string"
         }
       },

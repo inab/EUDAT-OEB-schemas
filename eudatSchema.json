@@ -154,35 +154,6 @@
          "hidden": true
        }
     },
-    "keywords": {
-                        "title": "Keywords",
-                        "description": "The keywords or key phrases describing the resource.",
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "keyword": {
-                                    "type": "string",
-                                    "minLength": 1
-                                },
-                                "scheme": {
-                                    "title": "Scheme",
-                                    "description": "The scheme used for the identifier.",
-                                    "type": "string"
-                                },
-                                "scheme_uri": {
-                                    "title": "Scheme URI",
-                                    "description": "The URI pointing to the scheme.",
-                                    "type": "string",
-                                    "format": "uri"
-                                }
-                            },
-                            "required": [
-                                "keyword"
-                            ]
-                        },
-                        "uniqueItems": true
-                    },
     "license": {
       "title": "License",
       "description": "Specify the license under which this data set is available to the users (e.g. GPL, Apache v2 or Commercial). Please use the License Selector for help and additional information.",

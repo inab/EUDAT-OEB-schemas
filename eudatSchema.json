@@ -181,28 +181,6 @@
         "license"
       ]
     },
-    "disciplines": {
-      "title": "Disciplines",
-      "type": "array",
-      "items": [
-        {
-          "type": "object"
-        }
-      ],
-      "uniqueItems": true,
-      "readonly": true
-    },
-    "keywords": {
-      "description": "A list of keywords or key phrases describing the resource.",
-      "type": "array",
-      "items": [
-        {
-          "type": "object"
-        }
-      ],
-      "title": "Keywords",
-      "uniqueItems": true
-    },
     "contact_email": {
       "description": "Contact email information for this record.",
       "format": "email",

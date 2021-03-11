@@ -186,11 +186,10 @@
       "type": "array",
       "items": [
         {
-          "type": "string"
+          "type": "object"
         }
       ],
       "uniqueItems": true,
-      "default": "Life Sciences",
       "readonly": true
     },
     "keywords": {
@@ -198,7 +197,7 @@
       "type": "array",
       "items": [
         {
-          "type": "string"
+          "type": "object"
         }
       ],
       "title": "Keywords",

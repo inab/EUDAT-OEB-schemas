@@ -181,22 +181,35 @@
         "license"
       ]
     },
-    
+    "disciplines": {
+      "title": "Disciplines",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ],
+      "uniqueItems": true,
+      "default": "Life Sciences",
+      "readonly": true
+    },
+    "keywords": {
+      "description": "A list of keywords or key phrases describing the resource.",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Keywords",
+      "uniqueItems": true
+    },
     "contact_email": {
       "description": "Contact email information for this record.",
       "format": "email",
       "title": "Contact Email",
       "type": "string"
     },
-    "disciplines": {
-                        "description": "The scientific disciplines linked with the resource.",
-                        "items": {
-                            "type": "string"
-                        },
-                        "title": "Disciplines",
-                        "type": "array",
-                        "uniqueItems": true
-                    },
     "resource_types": {
       "description": "The type(s) of the resource.",
       "type": "array",

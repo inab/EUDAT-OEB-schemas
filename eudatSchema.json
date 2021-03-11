@@ -188,6 +188,15 @@
       "title": "Contact Email",
       "type": "string"
     },
+    "disciplines": {
+                        "description": "The scientific disciplines linked with the resource.",
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Disciplines",
+                        "type": "array",
+                        "uniqueItems": true
+                    },
     "resource_types": {
       "description": "The type(s) of the resource.",
       "type": "array",
